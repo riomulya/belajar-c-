@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int int main() {
-  cout << "Rio Ganteng" << endl;
+int main() {
+  cout << "Rio Mulya Syawal" << endl;
   return 0;
 }
