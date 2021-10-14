@@ -8,6 +8,7 @@ int main() {
   cin >> y;
   cout << "masukan nilai z : ";
   cin >> z;
+  cout << endl;
 
   if (x%2==0) {
     cout << "x adalah genap\n\n";
