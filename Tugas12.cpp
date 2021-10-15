@@ -4,6 +4,7 @@ int main() {
   int i,j;
   int x[3] = {1,5,4};
   int y[3] = {3,2,5};
+  cout << endl;
   for (i=0;i<3;i++)
   {
       cout << "Array x " << i << ": " << x[i] <<endl;
@@ -19,4 +20,5 @@ int main() {
       j = x[i]+y[i];
       cout << "Array Penjumlahan " << i << ": " << j <<endl;
   }
+  cout << endl;
 }   
