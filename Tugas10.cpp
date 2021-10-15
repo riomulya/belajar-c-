@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
-int welcome(){
+void welcome(){
     cout << "Selamat Datang ";
 }
-int konjungsidi(){
+void konjungsidi(){
     cout << "Di ";
 }
-int fungsikali(){
+void fungsikali(){
     cout << "Fungsi Perkalian ";
 }
 int main() {
