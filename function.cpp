@@ -8,6 +8,6 @@ void sayhello(string nama)
 
 int main()
 {
-    sayhello("Rio");
+    sayhello("Rio M");
     return 0;
 }
