@@ -2,7 +2,7 @@
 // 211011401091
 // 02TPLP015
 #include <stdio.h>
-#include <stdlib.h>
+#include <cstdlib.h>
 #include <math.h>
 #include <conio.h>
 main()
@@ -30,7 +30,6 @@ main()
     else
     {
         printf("\nAkar Imajiner\n");
-        exit();
     }
     printf("Maka X1 nya Adalah : %f", xsatu);
     printf(" dan X2 nya adalah : %f", xdua);
