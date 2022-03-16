@@ -2,7 +2,6 @@
 // 211011401091
 // 02TPLP015
 #include <stdio.h>
-#include <cstdlib.h>
 #include <math.h>
 #include <conio.h>
 main()
