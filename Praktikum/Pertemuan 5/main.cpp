@@ -31,29 +31,4 @@
 main()
 {
     int i, k;
-    int *pNilaiMHS[JML_MHS], NILAI[JML_MHS][JML_MK];
-    FILE *pF;
-    for (i = 0; i <= JML_MHS - 1; i++)
-    {
-        pNilaiMHS[i] = NILAI[i];
-    }
-    if ((pF = fopen("D:\\document\\Kodingan\\belajar-c-\\Praktikum\\Pertemuan 5\\data.txt", "r")) == NULL)
-    {
-        printf("File tidak dapat dibuka\n");
-    }
-    else
-    {
-        for (i = 0; i < JML_MHS; i++)
-            for (k = 0; k < JML_MK; k++)
-                fscanf(pF, "%d", &NILAI[i][k]);
-    }
-    for (i = 0; i < JML_MHS; i++)
-    {
-        for (k = 0; k < JML_MK; k++)
-        {
-            printf("%d ", *pNilaiMHS[i]++);
-        }
-        printf("\n");
-    }
-    fclose(pF);
 }
