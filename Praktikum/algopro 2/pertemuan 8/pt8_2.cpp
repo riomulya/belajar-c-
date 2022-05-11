@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void rubah(int *A, int *B);
+void rubah(int A[], int B[]);
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
          << endl;
 }
 
-void rubah(int *A, int *B)
+void rubah(int A[], int B[])
 {
     int C;
     C = *B;

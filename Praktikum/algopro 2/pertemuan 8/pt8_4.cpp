@@ -4,21 +4,21 @@
 using namespace std;
 
 void cetak(int *A);
-void jumlah(int *A, int *B);
+void cetakElemen(int el);
+void kaliElemen(int *A, int el, int a);
+void rubahArray(int A[]);
 
 int main()
 {
     int A[SIZE] = {2, 4, 6, 3, 4, 2, 5, 6, 3, 2};
-    int B[SIZE] = {1, 3, 5, 7, 2, 2, 4, 6, 3, 1};
     // cetak matrik A
-    cout << "Nilai A    \t:";
     cetak(A);
-    // cetak matrik B
-    cout << "Nilai B    \t:";
-    cetak(B);
-    // jumlahkan matrik
-    cout << "Jumlah A+B \t:";
-    jumlah(A, B);
+    cetakElemen(A[2]);
+    kaliElemen(A, 2, 10);
+    // cetak A
+    cetak(A);
+    rubahArray(A);
+    cetak(A);
 }
 
 void cetak(int *A)
@@ -30,12 +30,20 @@ void cetak(int *A)
     cout << endl;
 }
 
-void jumlah(int *A, int *B)
+void cetakElemen(int el)
 {
-    int C[SIZE];
+    cout << "cetak elemen : " << el << endl;
+};
+
+void kaliElemen(int *A, int el, int a)
+{
+    A[el] *= a;
+};
+
+void rubahArray(int A[])
+{
     for (int i = 0; i < SIZE; i++)
     {
-        C[i] = A[i] + B[i];
+        A[i] = A[i] + 2;
     }
-    cetak(C);
-}
+};
