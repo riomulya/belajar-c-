@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <string>
 void sayhello(char nama[]);
 
-int main()
+main()
 {
     sayhello("joko");
 }
@@ -9,8 +10,4 @@ int main()
 void sayhello(char nama[])
 {
     printf("Hallo %s", nama);
-}
-char sayhello(char nama[])
-{
-    return "Hallo ", nama;
 }
