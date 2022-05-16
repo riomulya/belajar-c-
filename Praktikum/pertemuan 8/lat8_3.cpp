@@ -19,9 +19,10 @@ void printArray(int a[][3])
     int i, j;
     for (i = 0; i <= 1; i++)
     {
+        printf("{ ");
         for (j = 0; j <= 2; j++)
             printf("%d", a[i][j]);
         ;
-        printf("\n");
+        printf(" }\n");
     }
 }
