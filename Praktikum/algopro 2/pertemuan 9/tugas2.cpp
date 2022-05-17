@@ -15,7 +15,7 @@ int main()
         SeqSearch2(Data, jmlDat, x, &idx);
         if (idx != -1)
         {
-            cout << "Data yang dicari berada pada indek " << idx << endl;
+            cout << "Data yang dicari berada pada indek " << SeqSearch2(Data, jmlDat, x, &idx) << endl;
         }
         else
         {
@@ -29,7 +29,7 @@ int SeqSearch2(int Data[], int n, int x, int *idx)
     while (i < n - 1 && Data[i] != x)
         i++;
     if (Data[i] == x)
-        return *idx = i;
+        return i + 1; // return indeks
     else
-        return *idx = -1;
+        *idx = -1;
 }
