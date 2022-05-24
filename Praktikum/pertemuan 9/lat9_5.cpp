@@ -4,7 +4,7 @@
 
 #include <string.h>
 #include <stdio.h>
-int main(void)
+int main()
 {
     char str1[10] = {"abcdefghi"};
     char str2[10];

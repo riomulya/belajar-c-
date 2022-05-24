@@ -3,7 +3,7 @@
 // 02TPLP015
 #include <stdio.h>
 #include <ctype.h>
-int main(void)
+int main()
 {
     char c = 'C';
     if (isalpha(c))

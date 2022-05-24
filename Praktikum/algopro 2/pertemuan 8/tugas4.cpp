@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 long fibonacci(long n)
@@ -20,6 +21,6 @@ main()
     cin >> x;
     for (int i = 1; i <= x; i++)
     {
-        cout << "  " << fibonacci(i);
+        cout << setw(5) << fibonacci(i);
     }
 }

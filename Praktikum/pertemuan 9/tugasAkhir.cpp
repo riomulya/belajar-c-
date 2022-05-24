@@ -9,9 +9,9 @@ int main()
 {
     char nama[100], hobi[100];
     cout << "Masukkan Nama Anda : ";
-    gets(nama);
+    cin.getline(nama, 100);
     cout << "\nMasukkan Hobi Anda : ";
-    gets(hobi);
+    cin.getline(hobi, 100);
     cout << endl;
     cout << "Nama Anda Adalah : " << nama << endl;
     cout << "Hobi Anda Adalah : " << hobi;
