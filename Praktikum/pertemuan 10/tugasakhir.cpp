@@ -24,8 +24,4 @@ int main()
         }
     }
     printf("Ada %d Kata yang di inputkan \n\n", *jml);
-    printf("Pembuktian Adanya Pointer \n\n");
-    cout << " jml : " << *jml << endl;
-    cout << " &jml : " << jml << endl;
-    cout << " &muncul : " << &muncul << endl;
 }
