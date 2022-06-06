@@ -15,7 +15,7 @@ int main()
     mine.year = 1968;
     cout << "masukan judul film favorit: ";
     cin.getline(yours.title, 50);
-    cout << " masukan tahun :";
+    cout << "masukan tahun :";
     cin.getline(buffer, 50);
     yours.year = atoi(buffer);
     cout << "judul film favorit yang ada:\n ";
