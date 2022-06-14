@@ -1,6 +1,10 @@
+// Rio Mulya Syawal
+// 211011401091
+// 02TPLP015
+
 #include <iostream>
 using namespace std;
-
+void seqSearch(int data[], int length, int cari);
 int main()
 {
     int jumlah;
@@ -19,20 +23,37 @@ int main()
     {
         cout << data[j] << "   ";
     }
-    int cari, ketemu, index;
+ulang:
+    int cari;
     cout << "\n\nData Yang Ingin Dicari? : ";
     cin >> cari;
-    for (int k = 0; k < jumlah; k++)
+    seqSearch(data, jumlah, cari);
+    char pilih;
+    cout << "\nCari Lagi ? [y/t]";
+    cin >> pilih;
+    if (pilih == 'y' || pilih == 'Y')
+    {
+        goto ulang;
+    }
+}
+
+void seqSearch(int data[], int length, int cari)
+{
+    bool ketemu = false;
+    for (int k = 0; k < length; k++)
     {
         if (data[k] == cari)
         {
-            ketemu = data[k];
-            index = k;
-            cout << "\n\nData Yang Anda Cari Ada Di Index ke : " << index;
+            length = k;
+            ketemu = true;
         }
-        else
-        {
-            cout << "\n\nData Yang Anda Cari Tidak Ada ";
-        }
+    }
+    if (ketemu)
+    {
+        cout << "\n\nData Yang Anda Cari Ada Di Index ke : " << length;
+    }
+    else
+    {
+        cout << "Data Yang Dicari Tidak Ada";
     }
 }
