@@ -7,6 +7,7 @@ using namespace std;
 void seqSearch(int data[], int length, int cari);
 int main()
 {
+    system("Color 74");
     int jumlah;
     cout << "Masukkan Jumlah data Yang Ingin Anda Masukkan : ";
     cin >> jumlah;
@@ -15,10 +16,12 @@ int main()
     for (int i = 0; i < jumlah; i++)
     {
         int input;
-        cout << "Data Ke - " << i << " = ";
+        cout << "Data Ke - " << i + 1 << " = ";
         cin >> input;
         data[i] = input;
     }
+    cout << endl
+         << endl;
     for (int j = 0; j < jumlah; j++)
     {
         cout << data[j] << "   ";
