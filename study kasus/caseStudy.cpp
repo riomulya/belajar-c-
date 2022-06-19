@@ -9,7 +9,8 @@ void tampil();
 
 int main()
 {
-    int k; // menyimpan data;
+    int k, data[100], i, jml; // menyimpan data;
+    char pilih;
     system("Color 74");
 ulang:
     tampil();
@@ -18,33 +19,26 @@ ulang:
     cin >> pilihKondisi;
     if (pilihKondisi == 1)
     {
-        berkas = fopen("myfile.dat", "w");
-        int jml;
         cout << "Masukkan Jumlah Data ?: ";
         cin >> jml;
-        int data[jml];
+        data[jml];
         cout << "Masukkan Data ?: " << endl;
         for (int i = 0; i < jml; i++)
         {
+            cout << "Data Ke " << i + 1 << " : ";
             cin >> data[i];
-            fprintf(berkas, "%d ", data[i]);
         }
-        fclose(berkas);
         system("cls");
         goto ulang;
     }
-    else if (pilihKondisi == 3)
+    else if (pilihKondisi == 2)
     {
-        cout << "Data Di Dalam File Adalah" << endl;
-        berkas = fopen("myfile.dat", "r");
-        while (!feof(berkas))
+        berkas = fopen("myfile.dat", "w");
+        for (i = 0; i < jml; i++)
         {
-            fscanf(berkas, "%d ", &k);
-            cout << k << " ";
+            fprintf(berkas, "%d ", data[i]);
         }
-        cout << endl;
         fclose(berkas);
-        char pilih;
         cout << "Kembali Ke menu? [y/n] : ";
         cin >> pilih;
         if (pilih == 'y')
@@ -52,6 +46,39 @@ ulang:
             system("cls");
             goto ulang;
         }
+    }
+    else if (pilihKondisi == 3)
+    {
+        berkas = fopen("myfile.dat", "r");
+        cout << "Kembali Ke menu? [y/n] : ";
+        cin >> pilih;
+        if (pilih == 'y')
+        {
+            system("cls");
+            goto ulang;
+        }
+    }
+    else if (pilihKondisi == 4)
+    {
+        cout << "Data Di Dalam File Adalah" << endl;
+        while (!feof(berkas))
+        {
+            fscanf(berkas, "%d ", &k);
+            cout << k << " ";
+        }
+        cout << endl;
+        fclose(berkas);
+        cout << "Kembali Ke menu? [y/n] : ";
+        cin >> pilih;
+        if (pilih == 'y')
+        {
+            system("cls");
+            goto ulang;
+        }
+    }
+    else if (pilihKondisi == 5)
+    {
+      
     }
 }
 
