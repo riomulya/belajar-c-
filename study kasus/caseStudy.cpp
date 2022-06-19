@@ -21,18 +21,12 @@ void tampil()
     cout << RESET << setw(39) << "Menu Pilihan" << endl;
     cout << setw(50) << "---------------------------------" << endl
          << RED;
-    cout << setw(50) << "  1. Masukkan Data               " << endl
-         << RED;
-    cout << setw(50) << "  2. Simpan Data                 " << endl
-         << RED;
-    cout << setw(50) << "  3. Baca Data                   " << endl
-         << RED;
-    cout << setw(50) << "  4. Tampilkan Data Asal         " << endl
-         << RED;
-    cout << setw(50) << "  5. Urutkan Data Secara Menaik  " << endl
-         << RED;
-    cout << setw(50) << "  6. Tampilkan Data Terurut      " << endl
-         << RED;
+    cout << setw(50) << "  1. Masukkan Data               " << endl;
+    cout << setw(50) << "  2. Simpan Data                 " << endl;
+    cout << setw(50) << "  3. Baca Data                   " << endl;
+    cout << setw(50) << "  4. Tampilkan Data Asal         " << endl;
+    cout << setw(50) << "  5. Urutkan Data Secara Menaik  " << endl;
+    cout << setw(50) << "  6. Tampilkan Data Terurut      " << endl;
     cout << setw(50) << "  7. Keluar                      " << endl
          << RESET;
     cout << setw(50) << "---------------------------------" << endl;
@@ -95,7 +89,7 @@ ulang:
     else if (pilihKondisi == 4)
     {
         berkas = fopen("myfile.dat", "r");
-        cout << "Data Di Dalam File Adalah" << endl;
+        cout << "Data Di Dalam File Asal Adalah" << endl;
         while (!feof(berkas))
         {
             fscanf(berkas, "%d ", &k);
@@ -113,7 +107,7 @@ ulang:
     }
     else if (pilihKondisi == 5)
     {
-        for (i = 1; i <= jml; i++)
+        for (i = 1; i <= jml - 1; i++)
         {
             for (int j = i; j > 0; j--)
             {
@@ -125,6 +119,8 @@ ulang:
                 }
             }
         }
+        cout << "Data Sudah Terurut Naik\n"
+             << endl;
         cout << "Kembali Ke menu? [y/n] : ";
         cin >> pilih;
         if (pilih == 'y')
