@@ -1,33 +1,22 @@
 #include <iostream>
-#include <stdio.h>
+#include <fstream>
 using namespace std;
 
-FILE *fp;
-
-int main(void)
+int main()
 {
-    int i = 0, k; // Menyimpan data ke file
-    fp = fopen("C:\\kodingan\\belajar-cpp\\study kasus\\data1.dat", "w");
-    if (fp == NULL)
-        cout << "Error membuka berkas" << endl;
-    else
-    {
-        for (i = 0; i <= 10; i++)
-            fprintf(fp, "%d ", i);
-        fclose(fp);
-    }
-    // Membaca data dari file
-    fp = fopen("C:\\kodingan\\belajar-cpp\\study kasus\\data1.dat", "r");
-    if (fp == NULL)
-        cout << "Error membuka berkas" << endl;
-    else
-    {
-        while (!feof(fp))
-        {
-            fscanf(fp, "%d ", &k);
-            cout << k << " ";
-        }
-        cout << endl;
-        fclose(fp);
-    }
+    // int data[100];
+    int data = 10;
+    ofstream berkas("test1.txt");
+    berkas.open("test1.txt");
+    // for (int i = 0; i < 5;)
+    // {
+    //     cin >> data[i];
+    //     berkas << data;
+    // }
+    berkas << data;
+    berkas.close();
+    ifstream berkas("test1.txt");
+    berkas.open("test1.txt");
+    berkas >> data;
+    berkas.close();
 }
