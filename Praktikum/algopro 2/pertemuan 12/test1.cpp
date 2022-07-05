@@ -10,12 +10,12 @@ int main()
     const int arrSize = sizeof(data) / sizeof(data[0]); // Menghitung panjang data
     cetakDataArray(data, arrSize, "Sebelum Di Urutukan : ");
     selectionSortMax(data, arrSize);
-    cetakDataArray(data, arrSize, "Sesudah Di Urutukan : ");
+    cetakDataArray(data, arrSize, "\n\nSesudah Di Urutukan : ");
 }
 
 void selectionSortMax(int array1[], int n)
 {
-    int i, j, tmp, imaks;
+    int i, j, imaks;
     for (i = n; i > 0; i--)
     {
         imaks = i;
@@ -24,6 +24,12 @@ void selectionSortMax(int array1[], int n)
             if (array1[j] > array1[imaks])
                 imaks = j;
         }
+        cout << "\nProses yang terjadi di dalam selection sort" << endl;
+        for (int k = 0; k < n + 1; k++)
+        {
+            cout << array1[k] << " ";
+        }
+        cout << endl;
         swap(array1[i], array1[imaks]);
     }
 }
