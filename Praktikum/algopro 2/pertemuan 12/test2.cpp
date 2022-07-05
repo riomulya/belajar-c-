@@ -6,7 +6,7 @@ void cetakDataArray(int value[], int length, string pesan);
 
 int main()
 {
-    int i, data[] = {10, 40, 20, 60, 15, 4, 8, 100, 200, 25};
+    int i, data[] = {25, 27, 10, 8, 76, 21};
     const int arrSize = sizeof(data) / sizeof(data[0]); // Menghitung panjang data
     cetakDataArray(data, arrSize, "Sebelum Di Urutukan : ");
     selectionSortMin(data, arrSize);
